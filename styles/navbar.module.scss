@@ -1,0 +1,93 @@
+.navWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  z-index: 100;
+  padding-top: 120px;
+  .navLists {
+    .navItem {
+      color: #fafafa;
+      text-align: center;
+      margin-top: 3px;
+      font-size: 30px;
+      text-transform: uppercase;
+      position: relative;
+      padding: 5px 0;
+  
+      a {
+        position: relative;
+        display: inline-block; 
+        text-decoration: none; 
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          bottom: -3px;
+          left: 0;
+          background-color: #fafafa;
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+  
+        &:hover:after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+    }
+  }
+  
+  
+  .socialLists {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    .navItem {
+      color: #fafafa;
+      text-align: center;
+      margin-top: 3px;
+      font-size: 20px;
+      text-transform: uppercase;
+      position: relative;
+      a {
+        position: relative;
+        display: inline-block; 
+        text-decoration: none; 
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          bottom: -3px;
+          left: 0;
+          background-color: #fafafa;
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+  
+        &:hover:after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+      &:not(:last-child)::after {
+        content: "|";
+        margin: 0 10px;
+        color: #fafafa;
+      }
+    }
+  }
+  .navClearIcon {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 34px;
+    color: #fafafa;
+  }
+}

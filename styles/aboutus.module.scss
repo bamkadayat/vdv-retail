@@ -1,0 +1,209 @@
+.aboutUs {
+  min-height: 100vh;
+  background-color: white;
+  .aboutHeroWrap {
+    background: rgb(4, 11, 11);
+    background: radial-gradient(
+      circle,
+      rgba(4, 11, 11, 1) 19%,
+      rgba(61, 61, 61, 1) 100%
+    );
+
+    min-height: 500px;
+    height: 80vh;
+    padding-top: 100px;
+    position: relative;
+    .aboutHeroContainer {
+      position: absolute;
+      content: "";
+      top: 40%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      color: white;
+      @media (max-width: 768px) {
+        margin: 0 1rem;
+      }
+      .whiteCircle {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #306372;
+        position: inherit;
+        top: 10%;
+        z-index: -1;
+        left: -10%;
+        @media (max-width: 768px) {
+          margin: 0 1rem;
+        }
+      }
+      .eyebrowText {
+        margin: 1rem 0;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      h1 {
+        font-size: 3.2rem;
+        font-weight: 700;
+        max-width: 680px;
+        line-height: normal;
+        @media (max-width: 768px) {
+          font-size: 3rem;
+        }
+      }
+    }
+    @keyframes blurIn {
+      from {
+        opacity: 0;
+        filter: blur(10px);
+      }
+      to {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+
+    .blurText {
+      animation: blurIn 1.5s ease-out forwards;
+    }
+    .lineDecorator {
+      position: absolute;
+      content: "";
+      top: 60%;
+      left: 50%;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(250, 250, 250, 0.2);
+      transform: translate(-50%, -50%);
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 30%;
+        width: 110px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: rgba(250, 250, 250, 0.8);
+        animation: lineDecorator 2s infinite;
+        z-index: 1;
+      }
+    }
+    .descriptions {
+      position: absolute;
+      content: "";
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @media (max-width: 768px) {
+        left: 50%;
+        width: 100%;
+        margin-left: 1rem;
+      }
+      p {
+        color: white;
+        max-width: 400px;
+        line-height: 1.5;
+      }
+    }
+  }
+  .aboutSecondSection {
+    background-color: #e0e0e0;
+    min-height: 350px;
+    width: 100%;
+    .contentWrap {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 1rem;
+      @media (max-width: 768px) {
+        display: block;
+        padding: 0 1rem;
+        padding-top: 2rem;
+      }
+      .content {
+        align-self: center;
+        justify-self: start;
+        @media (max-width: 768px) {
+          margin-bottom: 2rem;
+        }
+        h1 {
+          font-size: 2rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+        }
+        p {
+          line-height: 1.5;
+        }
+      }
+      .contentImg {
+        align-self: center;
+        justify-self: end;
+        width: 380px;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 15px;
+          filter: grayscale(100%);
+        }
+      }
+    }
+    .contentWrapSecond {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 1rem;
+      @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem;
+        padding-top: 2rem;
+      }
+      .content {
+        align-self: center;
+        justify-self: end;
+        @media (max-width: 768px) {
+          padding-bottom: 2rem;
+          padding: 1rem;
+          order: 1;
+        }
+        h1 {
+          font-size: 2rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+        }
+        p {
+          line-height: 1.5;
+        }
+      }
+      .contentImg {
+        align-self: center;
+        justify-self: start;
+        width: 380px;
+        @media (max-width: 768px) {
+          margin-bottom: 2rem;
+          order: 2;
+          width: 100%;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 15px;
+          filter: grayscale(100%);
+        }
+      }
+    }
+  }
+}
